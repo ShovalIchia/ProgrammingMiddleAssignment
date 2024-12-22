@@ -1,0 +1,723 @@
+body {
+    background-image: url("../Img/background.png");
+    background-size: cover; /* מתאים את התמונה לגודל הקונטיינר */
+    background-position: center center; /* מרכז את התמונה */
+    background-attachment: fixed; /* התמונה תישאר במקום כאשר גוללים את הדף */
+    margin-bottom: 60px; /* הוספת מרווח בתחתית הדף כדי שלא יהיה חפף עם הפוטר */
+    font-family: 'Assistant', sans-serif;
+}
+
+.navBar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #E4EDF2;
+    z-index: 2;
+    padding: 10px;
+}
+
+.flex-container-nav {
+    width: 45%;
+    background-color: #59B4B2;
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.flex-container-nav.hide-mobile {
+    display: none;
+}
+
+.flex-container-nav li {
+    color: white;
+    padding: 20px;
+    font-family: 'Assistant', sans-serif;
+    font-weight: bold;
+}
+
+#nav-button {
+    background-color: transparent;
+    position: absolute;
+    top: 10px;
+}
+
+#close-nav-button {
+    background-color: transparent;
+    display: block;
+    margin-left: auto;
+    margin-top: 15px;
+}
+
+.btn-mobile {
+    border: none;
+}
+
+.btn-mobile img {
+    width: 35px;
+    height: 35px;
+}
+
+.nav-logo-right img,
+.nav-logo-left img {
+    max-width: 50px; /* מגביל את גודל התמונות */
+    height: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.navBar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navBar ul li {
+    padding: 15px 15px;
+}
+
+.navBar ul li {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+    font-family: 'Assistant', sans-serif;
+    cursor: default; /* מבטל את מצב ה-pointer */
+}
+
+/* צבע כחול תמיד למילה 'בעלי/ות תפקידים' */
+.navBar ul li.job {
+    color: #113444;
+}
+
+.headerBanner {
+    background-image: url("../Img/banner.png");
+    background-size: cover; /* מתאים את התמונה לגודל הקונטיינר */
+    background-position: right center; /* מרכז את התמונה */
+    width: 100%; /* תופס את כל הרוחב */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    margin-top: 52px;
+}
+
+.imageIntroduction {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.imageIntro {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Assistant', sans-serif;
+    font-size: 2rem;
+    line-height: 1.5;
+    color: #113444;
+}
+
+.insertText {
+    padding: 5px;
+    width: 200px;
+    font-family: 'Assistant', sans-serif;
+    border: solid 2px #59B4B2;
+    border-radius: 10px;
+}
+
+.insertText:focus {
+    border-color: #59B4B2;
+    outline: none;
+}
+
+.btn {
+    padding: 5px 11px;
+    color: white;
+    font-weight: bold;
+    border: solid 2px #59B4B2;
+    background-color: #59B4B2;
+    border-radius: 10px;
+    font-family: 'Assistant', sans-serif;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 10px 10px;
+    flex-wrap: wrap;
+    flex-direction: column
+}
+
+.titleIntro {
+    color: #113444;
+    font-family: 'Assistant', sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+    width: 90%;
+}
+
+.imageIntroduction {
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    position: relative; /* חשוב כדי שהנקודות יתמקמו בתוך התמונה */
+    width: 100%;
+}
+
+.imgAndTooltip {
+    position: relative;
+    width: 360px; /* שומר על רוחב קבוע */
+    height: auto; /* מאפשר התאמת גובה לפי הפרופורציות של התמונה */
+    display: inline-block; /* עיטוף דינמי */
+}
+
+.imageIntro {
+    width: 100%; /* מתאים לרוחב ה-wrapper */
+    height: auto; /* שומר על פרופורציות התמונה */
+    display: block;
+}
+
+.dot {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #EA3C84;
+    border-radius: 50%;
+    transform: translate(-50%, -50%); /* מיקום מדויק במרכז */
+}
+
+.altPicIntroduction {
+    font-family: 'Assistant', sans-serif;
+    color: #113444;
+    font-size: 1rem;
+}
+
+.tooltip-inner {
+    background-color: white; /* צבע רקע מותאם (לדוגמה: זהב) */
+    color: #113444; /* צבע טקסט מותאם */
+    font-family: 'Assistant', sans-serif;
+    font-size: 0.7rem; /* גודל טקסט מותאם */
+    font-weight: bold;
+    border-radius: 10px; /* עיגול פינות */
+    padding: 7px; /* ריווח פנימי */
+    border: 1px solid #113444; /* מסגרת */
+}
+
+#dotCleaningStaff {
+    top: 13%;
+    left: 4%;
+}
+
+#dotSecretary {
+    top: 12%;
+    left: 10%;
+}
+
+#dotLogisticsStaff {
+    top: 35%;
+    left: 13%;
+}
+
+#dotScrubNurse {
+    top: 60%;
+    left: 55%;
+}
+
+#dotSeniorSurgeon {
+    top: 33%;
+    left: 56%
+}
+
+#dotSurgicalResident {
+    top: 40%;
+    left: 45%;
+}
+
+#dotSeniorAnesthesiologist {
+    top: 32%;
+    left: 80%;
+}
+
+#dotAnesthesiologyResident {
+    top: 45%;
+    left: 75%;
+}
+
+#dotCirculatingNurse {
+    top: 70%;
+    left: 78%
+}
+
+#dotOrderly {
+    top: 55%;
+    left: 3%;
+}
+
+#arrowDown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#arrowDown:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../Img/arrowDownHover.png");
+    background-repeat: no-repeat;
+    background-size: contain; /* שומר על יחסי הגודל של התמונה */
+    background-position: center; /* ממקם את התמונה במרכז */
+    z-index: 1;
+}
+
+.cardImg {
+    width: 40%;
+}
+
+.card {
+    width: 17rem; /* רוחב קבוע לכרטיס */
+    height: 24rem; /* גובה קבוע לכרטיס */
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #113444;
+    font-size: 1.5rem;
+    border: 2px solid #59B4B2;
+    border-radius: 30px;
+    padding: 30px 20px 20px 20px;
+    box-sizing: border-box; /* מבטיח שמידות כוללות גבול וריפוד */
+    cursor: pointer;
+}
+
+.card-title {
+    font-family: 'Assistant', sans-serif;
+    font-weight: bold;
+    font-size: 1.125rem;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    font-family: 'Assistant', sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    text-align: right;
+    padding-right: 5px;
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* מרכז את הכרטיסיות אופקית */
+    align-items: center; /* מרכז את הכרטיסיות אנכית */
+    flex-wrap: wrap; /* מאפשר למלא שורות במקרה הצורך */
+    gap: 20px; /* מרווח בין הכרטיסיות */
+    margin-top: 30px;
+}
+
+.modal {
+    align-content: center
+}
+
+.modal-dialog {
+    display: flex;
+    justify-content: center
+}
+
+.modal-content {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer {
+    background-image: url("../Img/footer.png");
+    background-size: cover; /* מכסה את השטח */
+    background-position: center; /* ממרכז את התמונה */
+    background-repeat: no-repeat; /* מונע חזרה */
+    position: fixed; /* הפוטר יישאר תמיד בתחתית */
+    bottom: 0;
+    width: 100%; /* מבטיח שהתמונה תכסה את הרוחב */
+    height: 30px; /* מגדיר גובה לפוטר */
+    z-index: 2;
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        background-image: url("../Img/background.png");
+        background-size: cover; /* מתאים את התמונה לגודל הקונטיינר */
+        background-position: center center; /* מרכז את התמונה */
+        background-attachment: fixed; /* התמונה תישאר במקום כאשר גוללים את הדף */
+        margin-bottom: 60px; /* הוספת מרווח בתחתית הדף כדי שלא יהיה חפף עם הפוטר */
+        font-family: 'Assistant', sans-serif;
+    }
+
+    .navBar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #E4EDF2;
+        z-index: 2;
+        padding: 10px;
+    }
+
+    .btn-mobile {
+        display: none;
+    }
+
+    #main-nav {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        z-index: 1;
+        background-color: transparent;
+        width: 100%;
+        height: 50px;
+    }
+
+    #close-nav-button {
+        display: none;
+    }
+
+    .nav-logo-right img,
+    .nav-logo-left img {
+        max-width: 50px; /* מגביל את גודל התמונות */
+        height: auto;
+        margin-left: 0;
+        z-index: 4;
+        position: relative; /* מוודא שניתן לשלוט על המיקום */
+        display: flex;
+    }
+
+    .navBar ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        margin: 5px;
+        padding: 0;
+    }
+
+    .navBar ul li {
+        margin: 0 0 15px 15px;
+    }
+
+    .navBar ul li {
+        text-decoration: none;
+        font-size: 1.1rem;
+        color: #113444;
+        font-weight: bold;
+        cursor: default; /* מבטל את מצב ה-pointer */
+        font-family: 'Assistant', sans-serif;
+    }
+
+    .navBar ul li:hover {
+        color: #59B4B2;
+    }
+
+    /* צבע אדום תמיד למילה 'בעלי/ות תפקידים' */
+    .navBar ul li.job {
+        color: #59B4B2 !important;
+    }
+
+    .headerBanner {
+        background-image: url("../Img/banner.png");
+        background-size: cover; /* מתאים את התמונה לגודל הקונטיינר */
+        background-position: right center; /* מרכז את התמונה */
+        width: 100%; /* תופס את כל הרוחב */
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+        margin-top: 52px;
+    }
+
+    .imageIntroduction {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .imageIntro {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        text-align: center;
+        font-family: 'Assistant', sans-serif;
+        font-size: 2rem;
+        line-height: 1.5;
+        color: #113444;
+    }
+
+    .insertText {
+        padding: 5px;
+        width: 200px;
+        font-family: 'Assistant', sans-serif;
+        border: solid 2px #59B4B2;
+        border-radius: 10px;
+    }
+
+    .insertText:focus {
+        border-color: #59B4B2;
+        outline: none;
+    }
+
+    .btn {
+        padding: 5px 11px;
+        color: white;
+        font-weight: bold;
+        border: solid 2px #59B4B2;
+        background-color: #59B4B2;
+        border-radius: 10px;
+        font-family: 'Assistant', sans-serif;
+    }
+
+    .btn:hover {
+        background-color: white;
+        border-color: #59B4B2;
+        color: #113444;
+        transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* אנימציה חלקה */
+    }
+
+    .search {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .intro {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        margin: 30px 20px;
+        flex-wrap: wrap;
+        flex-direction: row
+    }
+
+    .titleIntro {
+        color: #113444;
+        font-family: 'Assistant', sans-serif;
+        font-size: 3rem;
+        text-align: center;
+        font-weight: bold;
+        width: 45%;
+    }
+
+    .imageIntroduction {
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+        position: relative; /* חשוב כדי שהנקודות יתמקמו בתוך התמונה */
+        width: 50%;
+    }
+
+    .imgAndTooltip {
+        position: relative;
+        width: 360px; /* שומר על רוחב קבוע */
+        height: auto; /* מאפשר התאמת גובה לפי הפרופורציות של התמונה */
+        display: inline-block; /* עיטוף דינמי */
+    }
+
+    .imageIntro {
+        width: 100%; /* מתאים לרוחב ה-wrapper */
+        height: auto; /* שומר על פרופורציות התמונה */
+        display: block;
+    }
+
+    .dot {
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background-color: #EA3C84;
+        border-radius: 50%;
+        transform: translate(-50%, -50%); /* מיקום מדויק במרכז */
+    }
+
+    .altPicIntroduction {
+        font-family: 'Assistant', sans-serif;
+        color: #113444;
+        font-size: 1.3rem;
+    }
+
+    .tooltip-inner {
+        background-color: white; /* צבע רקע מותאם (לדוגמה: זהב) */
+        color: #113444; /* צבע טקסט מותאם */
+        font-family: 'Assistant', sans-serif;
+        font-size: 0.7rem; /* גודל טקסט מותאם */
+        font-weight: bold;
+        border-radius: 10px; /* עיגול פינות */
+        padding: 7px; /* ריווח פנימי */
+        border: 1px solid #113444; /* מסגרת */
+    }
+
+    #dotCleaningStaff {
+        top: 13%;
+        left: 4%;
+    }
+
+    #dotSecretary {
+        top: 12%;
+        left: 10%;
+    }
+
+    #dotLogisticsStaff {
+        top: 35%;
+        left: 13%;
+    }
+
+    #dotScrubNurse {
+        top: 60%;
+        left: 55%;
+    }
+
+    #dotSeniorSurgeon {
+        top: 33%;
+        left: 56%
+    }
+
+    #dotSurgicalResident {
+        top: 40%;
+        left: 45%;
+    }
+
+    #dotSeniorAnesthesiologist {
+        top: 32%;
+        left: 80%;
+    }
+
+    #dotAnesthesiologyResident {
+        top: 45%;
+        left: 75%;
+    }
+
+    #dotCirculatingNurse {
+        top: 70%;
+        left: 78%
+    }
+
+    #dotOrderly {
+        top: 55%;
+        left: 3%;
+    }
+
+    #arrowDown {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #arrowDown:hover {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url("../Img/arrowDownHover.png");
+        background-repeat: no-repeat;
+        background-size: contain; /* שומר על יחסי הגודל של התמונה */
+        background-position: center; /* ממקם את התמונה במרכז */
+        z-index: 1;
+    }
+
+    .cardImg {
+        width: 40%;
+    }
+
+    .card {
+        width: 17rem; /* רוחב קבוע לכרטיס */
+        height: 24rem; /* גובה קבוע לכרטיס */
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #113444;
+        font-size: 1.5rem;
+        border: 2px solid #59B4B2;
+        border-radius: 30px;
+        padding: 30px 20px 20px 20px;
+        box-sizing: border-box; /* מבטיח שמידות כוללות גבול וריפוד */
+        cursor: pointer;
+    }
+
+    .card:hover {
+        transform: scale(1.1); /* מגדיל את הכרטיס ב-10% */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* מוסיף צל */
+        transition: transform 0.6s ease, box-shadow 0.4s ease;
+    }
+
+    .card-title {
+        font-family: 'Assistant', sans-serif;
+        font-weight: bold;
+        font-size: 1.125rem;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+
+    .card-text {
+        font-family: 'Assistant', sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        text-align: right;
+        padding-right: 5px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center; /* מרכז את הכרטיסיות אופקית */
+        align-items: center; /* מרכז את הכרטיסיות אנכית */
+        flex-wrap: wrap; /* מאפשר למלא שורות במקרה הצורך */
+        gap: 20px; /* מרווח בין הכרטיסיות */
+        margin-top: 30px;
+    }
+
+    .modal {
+        display: flex;
+        align-content: flex-start
+    }
+
+    .modal-dialog {
+        display: flex;
+        align-content: flex-start
+    }
+
+    .modal-content {
+        width: 100%;
+    }
+
+    footer {
+        background-image: url("../Img/footer.png");
+        background-size: cover; /* מכסה את השטח */
+        background-position: center; /* ממרכז את התמונה */
+        background-repeat: no-repeat; /* מונע חזרה */
+        position: fixed; /* הפוטר יישאר תמיד בתחתית */
+        bottom: 0;
+        width: 100%; /* מבטיח שהתמונה תכסה את הרוחב */
+        height: 30px; /* מגדיר גובה לפוטר */
+        z-index: 2;
+    }
+}

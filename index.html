@@ -1,0 +1,150 @@
+﻿<!doctype html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="JavaScript Prog 3">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Telem">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>תכנות 3 - JavaScript</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- הוספת jQuery לפני main.js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+<header>
+    <nav class="fixed-top">
+        <button id="nav-button" class="btn-mobile"><img src="Img/nav-icon.svg" alt="ניווט"></button>
+        <div class="navBar">
+            <div class="nav-logo-right">
+                <img id="shebaLogo" src="Img/shebaLogo.png" alt="לוגו שיבא">
+            </div>
+            <div class="nav-logo-left">
+                <img id="hitLogo" src="Img/hitLogo.png" alt="לוגו HIT">
+            </div>
+            <ul id="main-nav" class=" flex-container-nav hide-mobile">
+                <button id="close-nav-button" class="btn-mobile"><img src="Img/nav-close.svg"  alt="סגירה"></button>
+                <li class="home">דף הבית</li>
+                <li class="job">בעלי/ות תפקידים</li>
+                <li class="about">אודות</li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <div class="introduction">
+        <div class="headerBanner">
+            <h1>בעלי/ות תפקידים</h1>
+            <div class="search">
+                <input type="text" class="insertText" placeholder="הקלד/י תפקיד">
+            </div>
+        </div>
+
+        <div class="intro row">
+            <div class="titleIntro col-5">אז כמה אנשים צריך 
+                <br>  כדי לנתח מישהו אחד?
+                <br>ומה הם בדיוק עושים שם?
+            </div>
+            <div class="imageIntroduction col-5">
+                <div class="imgAndTooltip">
+                    <img class="imageIntro" src="./Img/introductionPic.png" alt="תמונה של חדר הניתוח">
+
+                    <div class="dot"
+                         id="dotCleaningStaff"
+                         data-bs-toggle="tooltip"
+                         title="עובד/ת ניקיון"
+                         data-bs-placement="top"></div>
+
+                    <div class="dot"
+                         id="dotSecretary"
+                         data-bs-toggle="tooltip"
+                         title="מזכיר/ה"
+                         data-bs-placement="top"></div>
+
+                    <div class="dot"
+                         id="dotLogisticsStaff"
+                         data-bs-toggle="tooltip"
+                         title="עובד/ת לוגיסטיקה"
+                         data-bs-placement="top"></div>
+
+                    <div class="dot"
+                         id="dotScrubNurse"
+                         data-bs-toggle="tooltip"
+                         title="אח/ות רחוץ/ה (סטרילי/ת)"
+                         data-bs-placement="top"></div>
+
+                    <div class="dot"
+                         id="dotSeniorSurgeon"
+                         data-bs-toggle="tooltip"
+                         title="כירורג/ית בכיר/ה"
+                         data-bs-placement="top"></div>
+
+                    <div class="dot"
+                         id="dotSurgicalResident"
+                         data-bs-toggle="tooltip"
+                         title="כירורג/ית מתמחה"
+                         data-bs-placement="top"></div>
+
+                    <div class="dot"
+                         id="dotAnesthesiologyResident"
+                         data-bs-toggle="tooltip"
+                         title="מרדים/ה מתמחה"
+                         data-bs-placement="top"></div>
+
+                    <div class="dot"
+                         id="dotSeniorAnesthesiologist"
+                         data-bs-toggle="tooltip"
+                         title="מרדים/ה בכיר/ה"
+                         data-bs-placement="top"></div>
+
+                    <div class="dot"
+                         id="dotOrderly"
+                         data-bs-toggle="tooltip"
+                         title="סניטר/ית"
+                         data-bs-placement="top"></div>
+
+                    <div class="dot"
+                         id="dotCirculatingNurse"
+                         data-bs-toggle="tooltip"
+                         title="אח/ות מסתובב/ת"
+                         data-bs-placement="top"></div>
+
+                </div>
+
+                <p class="altPicIntroduction">הנקודות הוורודות יחשפו את תפקיד העובד/ת</p>
+            </div>
+            <div class="arrow" id="arrowDown">
+                <a href="#arrowDown"><img src="./Img/arrowDown.png"></a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div id="itemsContainer"></div>
+    </div>
+
+
+</main>
+
+<footer>
+</footer>
+
+</body>
+
+</html>
